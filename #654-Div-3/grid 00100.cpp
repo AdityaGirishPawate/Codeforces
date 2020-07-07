@@ -45,7 +45,7 @@ using namespace __gnu_pbds;
 typedef tree<int,null_type,less<>,rb_tree_tag,tree_order_statistics_node_update> o_set;
 vector<vector<int>> g;
 //std::ios::sync_with_stdio(false);
-
+/*
 int32_t main() {
     std::ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -90,7 +90,32 @@ int32_t main() {
         }
     }
 }
-
+*/
+int32_t main() {
+    std::ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int t;
+    cin>>t;
+    while(t--){
+        int n,k;
+        cin>>n>>k;
+        vector<vector<int>> a(n,vector<int> (n,0));
+        if(k%n==0)  cout<<0<<endl;
+        else    cout<<2<<endl;
+        int p=0,q=0;
+        while(k--){
+            a[p][q]=1;
+            p++,q++,q%=n;
+            if(p==n){
+                p=0,q++,q%=n;
+            }
+        }
+        rep(i,n){
+            rep(j,n)    cout<<a[i][j];
+            cout<<endl;
+        }
+    }
+}
 
 
 
