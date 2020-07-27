@@ -1,1 +1,1 @@
-This contains some solutions of codeforces
+Codeforces Probelems and contest solutions
